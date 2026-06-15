@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 
 export default function Contact() {
@@ -55,7 +56,7 @@ export default function Contact() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
           <p className="text-xl text-dark-300">
-            We'd love to hear from you. Send us a message!
+            We&apos;d love to hear from you. Send us a message!
           </p>
         </div>
 
@@ -82,7 +83,7 @@ export default function Contact() {
           <div className="card">
             {submitted && (
               <div className="mb-6 p-4 bg-green-600 text-white rounded-lg">
-                ✓ Thank you! We've received your message and will get back to you soon.
+                ✓ Thank you! We&apos;ve received your message and will get back to you soon.
               </div>
             )}
 
@@ -171,7 +172,7 @@ export default function Contact() {
           {/* FAQ Snippet */}
           <div className="mt-16 text-center">
             <p className="text-dark-400 mb-4">
-              Have a quick question? Check out our <a href="/faq" className="text-blue-500 hover:text-blue-400">FAQ page</a>
+              Have a quick question? Check out our <Link href="/faq" className="text-blue-500 hover:text-blue-400">FAQ page</Link>
             </p>
           </div>
         </div>
