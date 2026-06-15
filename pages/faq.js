@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import { FiChevronDown } from 'react-icons/fi'
 
 export default function FAQ() {
@@ -144,9 +145,9 @@ export default function FAQ() {
           <p className="text-lg text-opacity-90 mb-6">
             Our customer support team is here to help you
           </p>
-          <a href="/contact" className="btn-primary inline-block">
+          <Link href="/contact" className="btn-primary inline-block">
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </div>
