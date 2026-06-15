@@ -4,24 +4,35 @@ import { FiFilter, FiX } from 'react-icons/fi'
 export default function Products() {
   const [filterOpen, setFilterOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('all')
-  const [priceRange, setPriceRange] = useState(1000)
+  const [priceRange, setPriceRange] = useState(500)
 
   const products = [
-    { id: 1, name: 'Premium Headphones', price: 299, category: 'electronics', image: '🎧' },
-    { id: 2, name: 'Wireless Speaker', price: 199, category: 'electronics', image: '🔊' },
-    { id: 3, name: 'Smart Watch', price: 399, category: 'wearables', image: '⌚' },
-    { id: 4, name: 'Phone Case', price: 29, category: 'accessories', image: '📱' },
-    { id: 5, name: 'USB-C Cable', price: 19, category: 'accessories', image: '🔌' },
-    { id: 6, name: 'Laptop Stand', price: 89, category: 'accessories', image: '💻' },
-    { id: 7, name: 'Tablet', price: 599, category: 'electronics', image: '📲' },
-    { id: 8, name: 'Fitness Band', price: 149, category: 'wearables', image: '⌚' },
+    { id: 1, name: 'Classic Cotton T-Shirt', price: 29, category: 'tops', image: '👕' },
+    { id: 2, name: 'Premium Denim Jeans', price: 89, category: 'bottoms', image: '👖' },
+    { id: 3, name: 'Casual Polo Shirt', price: 49, category: 'tops', image: '👕' },
+    { id: 4, name: 'Wool Sweater', price: 79, category: 'tops', image: '🧶' },
+    { id: 5, name: 'Leather Belt', price: 39, category: 'accessories', image: '⌛' },
+    { id: 6, name: 'Fashion Sunglasses', price: 99, category: 'accessories', image: '😎' },
+    { id: 7, name: 'Knit Beanie Hat', price: 25, category: 'accessories', image: '🧢' },
+    { id: 8, name: 'Canvas Sneakers', price: 79, category: 'shoes', image: '👟' },
+    { id: 9, name: 'Silk Scarf', price: 45, category: 'accessories', image: '🧣' },
+    { id: 10, name: 'Casual Blazer', price: 129, category: 'outerwear', image: '🧥' },
+    { id: 11, name: 'Athletic Joggers', price: 59, category: 'bottoms', image: '👖' },
+    { id: 12, name: 'Elegant Handbag', price: 149, category: 'accessories', image: '👜' },
+    { id: 13, name: 'Formal Dress Shoes', price: 119, category: 'shoes', image: '👞' },
+    { id: 14, name: 'Vintage Denim Jacket', path: 'outerwear', price: 99, category: 'outerwear', image: '🧥' },
+    { id: 15, name: 'Cotton Dress', price: 69, category: 'dresses', image: '👗' },
+    { id: 16, name: 'Designer Watch', price: 199, category: 'accessories', image: '⌚' },
   ]
 
   const categories = [
     { id: 'all', name: 'All Products' },
-    { id: 'electronics', name: 'Electronics' },
+    { id: 'tops', name: 'Tops' },
+    { id: 'bottoms', name: 'Bottoms' },
+    { id: 'dresses', name: 'Dresses' },
+    { id: 'outerwear', name: 'Outerwear' },
+    { id: 'shoes', name: 'Shoes' },
     { id: 'accessories', name: 'Accessories' },
-    { id: 'wearables', name: 'Wearables' },
   ]
 
   const filtered = products.filter(p => {
@@ -33,7 +44,8 @@ export default function Products() {
   return (
     <div className="bg-dark-950 min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold mb-8">Products</h1>
+        <h1 className="text-4xl font-bold mb-8">Clothing & Fashion</h1>
+        <p className="text-dark-300 mb-8">Discover our premium collection of clothing and fashion accessories</p>
 
         <div className="flex gap-8">
           {/* Sidebar - Desktop */}
@@ -70,7 +82,7 @@ export default function Products() {
                 <input
                   type="range"
                   min="0"
-                  max="1000"
+                  max="500"
                   value={priceRange}
                   onChange={(e) => setPriceRange(parseInt(e.target.value))}
                   className="w-full"
@@ -132,7 +144,7 @@ export default function Products() {
                   <input
                     type="range"
                     min="0"
-                    max="1000"
+                    max="500"
                     value={priceRange}
                     onChange={(e) => setPriceRange(parseInt(e.target.value))}
                     className="w-full"
@@ -155,7 +167,7 @@ export default function Products() {
                       {product.image}
                     </div>
                     <h3 className="font-semibold mb-2">{product.name}</h3>
-                    <p className="text-dark-400 text-sm mb-4">{product.category}</p>
+                    <p className="text-dark-400 text-sm mb-4 capitalize">{product.category}</p>
                     <div className="flex justify-between items-center">
                       <span className="text-blue-500 font-bold text-lg">${product.price}</span>
                       <button className="btn-primary text-sm py-2 px-4">
