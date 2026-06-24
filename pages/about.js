@@ -28,7 +28,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Maris4u</h1>
           <p className="text-xl text-dark-300 max-w-2xl mx-auto">
-            We're committed to bringing you the best shopping experience with premium products and exceptional service.
+            We&#39;re committed to bringing you the best shopping experience with premium products and exceptional service.
           </p>
         </div>
       </section>
